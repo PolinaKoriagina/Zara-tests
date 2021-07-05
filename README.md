@@ -35,6 +35,7 @@ For further development there are some example tests in src/test/java/cloud.auto
 ```bash
 gradle clean demowebshop
 ```
+[link to zara](https://www.zara.com/pl/)
 
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
 :blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
