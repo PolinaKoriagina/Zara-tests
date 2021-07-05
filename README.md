@@ -41,10 +41,20 @@ Serve report:
 allure serve build/allure-results
 ```
 
-The Allure TestOps report [here](https://allure.autotests.cloud/launch/4708)
+### The Allure report [here](https://jenkins.autotests.cloud/job/Zara-tests/11/allure/#suites/29bfb06a8c676147f4953b815c0584af/4da31383401b59e1/)
+
+<img src="images/AllureReport.png">
+
+### The Allure TestOps report [here](https://allure.autotests.cloud/launch/4708)
+
 <img src="images/allureTestOpsTestCases.png">
 
-Video of passing tests from selenoid
+### Telegram bot with notifications of passed tests
+
+<img src="images/TelegramBot.png">
+
+### Video of passing tests from selenoid
+
 <img src="images/selenoid video.gif">
 
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
