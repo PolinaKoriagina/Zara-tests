@@ -12,6 +12,7 @@
 ### For run with Jenkins use this [link](https://jenkins.autotests.cloud/job/Zara-tests/)
 
 <img src="images/JenkinsBuild.png">
+
 ### For run remote tests need fill remote.properties or to pass value:
 
 * browser (default chrome)
@@ -43,13 +44,8 @@ allure serve build/allure-results
 The Allure TestOps report [here](https://allure.autotests.cloud/launch/4708)
 <img src="images/allureTestOpsTestCases.png">
 
-For further development there are some example tests in src/test/java/cloud.autotests/tests/demowebshop
-
-* remove @Disabled("...") annotation to run tests
-
-```bash
-gradle clean demowebshop
-```
+Video of passing tests from selenoid
+<img src="images/selenoid video.gif">
 
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
 :blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
