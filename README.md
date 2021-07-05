@@ -1,4 +1,4 @@
-# Autotests for Zara/pl page https://www.zara.com/pl/
+# Autotests for [Zara/pl](https://www.zara.com/pl/)
 
 ## Used stack
 
@@ -9,6 +9,9 @@
  <img src="images/Allure Report.svg" width="40" height="40"> <img src="images/Allure TestOps.svg" width="40" height="40"> 
  <img src="images/Telegram.svg" width="40" height="40">
 
+### For run with Jenkins use this [link](https://jenkins.autotests.cloud/job/Zara-tests/)
+
+<img src="images/JenkinsBuild.png">
 ### For run remote tests need fill remote.properties or to pass value:
 
 * browser (default chrome)
@@ -37,6 +40,9 @@ Serve report:
 allure serve build/allure-results
 ```
 
+The Allure TestOps report [here](https://allure.autotests.cloud/launch/4708)
+<img src="images/allureTestOpsTestCases.png">
+
 For further development there are some example tests in src/test/java/cloud.autotests/tests/demowebshop
 
 * remove @Disabled("...") annotation to run tests
@@ -44,7 +50,6 @@ For further development there are some example tests in src/test/java/cloud.auto
 ```bash
 gradle clean demowebshop
 ```
-[link to zara](https://www.zara.com/pl/)
 
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
 :blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
