@@ -57,6 +57,7 @@ allure serve build/allure-results
 
 <img src="images/selenoid video.gif">
 
+:yellow_heart: Thank you for reading this README. Have a great day!
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
 :blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
 
