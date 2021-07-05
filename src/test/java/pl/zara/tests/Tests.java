@@ -47,7 +47,6 @@ public class Tests extends TestBase {
             assertThat(consoleLogs).doesNotContain(errorText);
         });
     }
-// //*[contains(@text,"polska")]
 
     @Test
     @Description("Add a dress  to the cart and check if it saved there test")
@@ -58,7 +57,7 @@ public class Tests extends TestBase {
         step("Click the cookies button", () ->
                 $("#onetrust-accept-btn-handler").click());
         step("Click continue", () ->
-                $x("//*[contains(@text,\"TAK, CHCĘ KONTYNUOWAĆ NA STRONIE POLSKA/POLAND\")]")
+                $(".geolocation-modal__button")
                         .click());
         step("Click the sandwich button", () ->
                 $(".layout-header__mobile-action")
