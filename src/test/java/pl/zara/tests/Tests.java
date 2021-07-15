@@ -5,8 +5,7 @@ import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.exist;
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -84,6 +83,51 @@ public class Tests extends TestBase {
                 $(".product-cart-buttons").click());
         step("Check if there is an item in the cart", () ->
                 $(".mini-cart-item").shouldBe(exist));
+
+    }
+
+    @Test
+    @Description("Check if there is a search input test")
+    @DisplayName("Check if there is a search input")
+    void checkSearchInput() {
+        step("Open url 'https://www.zara.com/pl/'", () ->
+                open("https://www.zara.com/pl/"));
+        step("Click the cookies button", () ->
+                $("#onetrust-accept-btn-handler").click());
+        step("Click continue", () ->
+                $(".geolocation-modal__button")
+                        .click());
+        step("Check the search input field", () ->
+                $(".layout-header-search-bar")
+                        .shouldBe(visible));
+
+    }
+
+    @Test
+    @Description("Open the dress page and check if there is displayed description test")
+    @DisplayName("Open the dress page and check if there is displayed description")
+    void checkDressDescription() {
+        step("Open url 'https://www.zara.com/pl/'", () ->
+                open("https://www.zara.com/pl/"));
+        step("Click the cookies button", () ->
+                $("#onetrust-accept-btn-handler").click());
+        step("Click continue", () ->
+                $(".geolocation-modal__button")
+                        .click());
+        step("Click the sandwich button", () ->
+                $(".layout-header__mobile-action")
+                        .click());
+        step("Choose Kobieta", () ->
+                $("[aria-label=\"KOBIETA, Rozwiń kategorie pomocnicze\"]").click());
+        step("Choose New collection", () ->
+                $("[aria-label=\"NEW COLLECTION, Rozwiń kategorie pomocnicze\"]")
+                        .click());
+        step("Choose dresses", () ->
+                $("[aria-label=\"SUKIENKI , Rozwiń kategorie pomocnicze\"]").click());
+        step("Choose the first dress", () ->
+                $(".product-link").click());
+        step("Check the description", () ->
+                $(".product-detail-description").shouldBe(visible));
 
     }
 }
