@@ -15,7 +15,7 @@ public class Tests extends TestBase {
     @Test
     @Description("Open the page and check if there is Cookies label")
     @DisplayName("Cookies label check")
-    void firstTest() {
+    void cookiesTest() {
         step("Open url https://www.zara.com/pl/", () -> {
             open("https://www.zara.com/pl/");
         });
@@ -24,8 +24,8 @@ public class Tests extends TestBase {
                     .shouldHave(text("Akceptuj wszystkie pliki cookie"));
         });
 
-        step("Page title should have text 'ZARA Polska / Poland | WYPRZEDAŻ'", () -> {
-            String expectedTitle = "ZARA Polska / Poland | WYPRZEDAŻ";
+        step("Page title should have text 'ZARA Polska / Poland | Nowa Kolekcja Online'", () -> {
+            String expectedTitle = "ZARA Polska / Poland | Nowa Kolekcja Online";
             String actualTitle = title();
             assertThat(actualTitle).isEqualTo(expectedTitle);
         });
@@ -63,11 +63,11 @@ public class Tests extends TestBase {
                         .click());
         step("Choose Kobieta", () ->
                 $("[aria-label=\"KOBIETA, Rozwiń kategorie pomocnicze\"]").click());
-        step("Choose New collection", () ->
-                $("[aria-label=\"NEW COLLECTION, Rozwiń kategorie pomocnicze\"]")
-                        .click());
+//        step("Choose New collection", () ->
+//                $("[aria-label=\"KOLEKCJA, Rozwiń kategorie pomocnicze\"]")
+//                        .click());
         step("Choose dresses", () ->
-                $("[aria-label=\"SUKIENKI , Rozwiń kategorie pomocnicze\"]").click());
+                $("[aria-label=\"SUKIENKI, Rozwiń kategorie pomocnicze\"]").click());
         step("Choose the first dress", () ->
                 $(".product-link").click());
         step("Add to cart", () ->
@@ -78,11 +78,11 @@ public class Tests extends TestBase {
         step("Close the error message", () ->
                 $(".modal__actions").click());
         step("Choose the first available size", () ->
-                $(".product-size-selector__size-list-item").click());
-        step("Add to cart with chosen size", () ->
-                $(".product-cart-buttons").click());
-        step("Check if there is an item in the cart", () ->
-                $(".mini-cart-item").shouldBe(exist));
+                $(".product-detail-size-selector__size-list").click());
+//        step("Add to cart with chosen size", () ->
+//                $(".product-cart-buttons").click());
+//        step("Check if there is an item in the cart", () ->
+//                $(".mini-cart-item").shouldBe(exist));
 
     }
 
