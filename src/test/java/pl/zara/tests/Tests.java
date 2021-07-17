@@ -21,7 +21,7 @@ public class Tests extends TestBase {
         });
         step("check if there is label \"Akceptuj wszystkie pliki cookie\"", () -> {
             $("#onetrust-accept-btn-handler ")
-                    .shouldHave(text("Alle Cookie akzeptieren"));
+                    .shouldHave(text("AKCEPTUJ WSZYSTKIE PLIKI COOKIE"));
         });
 
         step("Page title should have text 'ZARA Polska / Poland | Nowa Kolekcja Online'", () -> {
