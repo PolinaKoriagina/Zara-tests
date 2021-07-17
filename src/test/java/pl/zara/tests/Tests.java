@@ -20,8 +20,8 @@ public class Tests extends TestBase {
             open("https://www.zara.com/pl/");
         });
         step("check if there is label \"Akceptuj wszystkie pliki cookie\"", () -> {
-            $("#onetrust-accept-btn-handler ")
-                    .shouldHave(text("AKCEPTUJ WSZYSTKIE PLIKI COOKIE"));
+            $("#onetrust-banner-sdk")
+                    .shouldBe(visible);
         });
 
         step("Page title should have text 'ZARA Polska / Poland | Nowa Kolekcja Online'", () -> {
