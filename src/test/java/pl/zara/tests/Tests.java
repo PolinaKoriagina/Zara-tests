@@ -19,14 +19,16 @@ public class Tests extends TestBase {
         step("Open url https://www.zara.com/pl/", () -> {
             open("https://www.zara.com/pl/");
         });
+//        step("Click the cookies button", () ->
+//                $("#onetrust-accept-btn-handler").click());
         step("check if there is label \"Akceptuj wszystkie pliki cookie\"", () -> {
             $("#onetrust-banner-sdk")
                     .shouldBe(visible);
         });
 
         step("Page title should have text 'ZARA Polska / Poland | Nowa Kolekcja Online'", () -> {
-            String expectedTitle = "ZARA Polska / Poland | Nowa Kolekcja Online";
-            String actualTitle = "ZARA Polska / Poland | Nowa Kolekcja Online";
+            String expectedTitle = "\"ZARA Polska / Poland | Nowa Kolekcja Online\"";
+            String actualTitle = "\"ZARA Polska / Poland | Nowa Kolekcja Online\"";
             assertThat(actualTitle).isEqualTo(expectedTitle);
         });
     }
