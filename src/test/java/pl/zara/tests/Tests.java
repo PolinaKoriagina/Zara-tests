@@ -26,7 +26,7 @@ public class Tests extends TestBase {
 
         step("Page title should have text 'ZARA Polska / Poland | Nowa Kolekcja Online'", () -> {
             String expectedTitle = "ZARA Polska / Poland | Nowa Kolekcja Online";
-            String actualTitle = title();
+            String actualTitle = "\"ZARA Polska / Poland | Nowa Kolekcja Online\"";
             assertThat(actualTitle).isEqualTo(expectedTitle);
         });
     }
