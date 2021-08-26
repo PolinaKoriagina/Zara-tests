@@ -8,8 +8,8 @@ repositories {
 }
 
 def allureVersion = "2.13.9",
-    selenideVersion = "5.20.1",
-    junitVersion = "5.7.1"
+    selenideVersion = "5.22.0",
+    junitVersion = "5.7.2"
 
 allure {
     version = allureVersion
