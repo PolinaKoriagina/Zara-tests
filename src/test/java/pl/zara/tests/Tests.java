@@ -101,7 +101,7 @@ public class Tests extends TestBase {
                 $(".geolocation-modal__button")
                         .click());
         step("Check the search input field", () ->
-                $(".1layout-header-search-bar")
+                $(".layout-header-search-bar")
                         .shouldBe(visible));
 
     }
