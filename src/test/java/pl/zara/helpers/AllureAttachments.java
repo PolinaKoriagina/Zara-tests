@@ -31,27 +31,27 @@ public class AllureAttachments {
         return DriverUtils.getPageSourceAsBytes();
     }
 
-    @Attachment
-    public static void addVideo(String sessionId) {
-        URL videoUrl = DriverUtils.getVideoUrl(sessionId);
-        if (videoUrl != null) {
-            InputStream videoInputStream = null;
-            sleep(1000);
-
-            for (int i = 0; i < 10; i++) {
-                try {
-                    videoInputStream = videoUrl.openStream();
-                    break;
-                } catch (FileNotFoundException e) {
-                    sleep(1000);
-                } catch (IOException e) {
-                    Logging.LOGGER.warn("[ALLURE VIDEO ATTACHMENT ERROR] Cant attach allure video, {}", videoUrl);
-                    e.printStackTrace();
-                }
-            }
-            Allure.addAttachment("Video", "video/mp4", videoInputStream, "mp4");
-        }
-    }
+//    @Attachment
+//    public static void addVideo(String sessionId) {
+//        URL videoUrl = DriverUtils.getVideoUrl(sessionId);
+//        if (videoUrl != null) {
+//            InputStream videoInputStream = null;
+//            sleep(1000);
+//
+//            for (int i = 0; i < 10; i++) {
+//                try {
+//                    videoInputStream = videoUrl.openStream();
+//                    break;
+//                } catch (FileNotFoundException e) {
+//                    sleep(1000);
+//                } catch (IOException e) {
+//                    Logging.LOGGER.warn("[ALLURE VIDEO ATTACHMENT ERROR] Cant attach allure video, {}", videoUrl);
+//                    e.printStackTrace();
+//                }
+//            }
+//            Allure.addAttachment("Video", "video/mp4", videoInputStream, "mp4");
+//        }
+//    }
 
 
 }
