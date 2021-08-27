@@ -53,6 +53,22 @@ public class Tests extends TestBase {
     @Test
     @Description("Add a dress  to the cart and check if it saved there test")
     @DisplayName("Add a dress  to the cart and check if it saved there")
+    void checkSandwichButton() {
+        step("Open url 'https://www.zara.com/pl/'", () ->
+                open("https://www.zara.com/pl/"));
+        step("Click the cookies button", () ->
+                $("#onetrust-accept-btn-handler").click());
+        step("Click continue", () ->
+                $(".geolocation-modal__button")
+                        .click());
+        step("Check the sandwich button", () ->
+                $(".layout-header__mobile-action")
+                        .shouldBe(visible));
+    }
+
+    @Test
+    @Description("Add a dress  to the cart and check if it saved there test")
+    @DisplayName("Add a dress  to the cart and check if it saved there")
     void addToCartTest() {
         step("Open url 'https://www.zara.com/pl/'", () ->
                 open("https://www.zara.com/pl/"));
@@ -82,10 +98,10 @@ public class Tests extends TestBase {
                 $(".modal__actions").click());
         step("Choose the first available size", () ->
                 $(".product-detail-size-selector__size-list").click());
-//        step("Add to cart with chosen size", () ->
-//                $(".product-cart-buttons").click());
-//        step("Check if there is an item in the cart", () ->
-//                $(".mini-cart-item").shouldBe(exist));
+        step("Add to cart with chosen size", () ->
+                $(".product-cart-buttons").click());
+        step("Check if there is an item in the cart", () ->
+                $(".mini-cart-item").shouldBe(exist));
 
     }
 
