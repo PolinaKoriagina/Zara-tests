@@ -24,13 +24,7 @@ public class Tests extends TestBase {
                 $("#onetrust-accept-btn-handler").click());
         step("check if there is label \"Akceptuj wszystkie pliki cookie\"", () -> {
             $("#onetrust-banner-sdk")
-                    .shouldBe(exist);
-        });
-
-        step("Page title should have text 'ZARA Polska / Poland | Nowa Kolekcja Online'", () -> {
-            String expectedTitle = "\"ZARA Polska / Poland | Nowa Kolekcja Online\"";
-            String actualTitle = "\"ZARA Polska / Poland | Nowa Kolekcja Online\"";
-            assertThat(actualTitle).isEqualTo(expectedTitle);
+                    .shouldBe(visible);
         });
     }
 
@@ -51,7 +45,7 @@ public class Tests extends TestBase {
     }
 
     @Test
-    @Description("Add a dress  to the cart and check if it saved there test")
+    @Description("Check dress in the cart")
     @DisplayName("Add a dress  to the cart and check if it saved there")
     void checkSandwichButton() {
         step("Open url 'https://www.zara.com/pl/'", () ->
@@ -67,7 +61,7 @@ public class Tests extends TestBase {
     }
 
     @Test
-    @Description("Add a dress  to the cart and check if it saved there test")
+    @Description("Add to the cart")
     @DisplayName("Add a dress  to the cart and check if it saved there")
     void addToCartTest() {
         step("Open url 'https://www.zara.com/pl/'", () ->
@@ -75,16 +69,11 @@ public class Tests extends TestBase {
         step("Click the cookies button", () ->
                 $("#onetrust-accept-btn-handler").click());
         step("Click continue", () ->
-                $(".geolocation-modal__button")
-                        .click());
+                $(".geolocation-modal__button").click());
         step("Click the sandwich button", () ->
-                $(".layout-header__mobile-action")
-                        .click());
+                $(".layout-header__mobile-action").click());
         step("Choose Kobieta", () ->
                 $("[aria-label=\"KOBIETA, Rozwiń kategorie pomocnicze\"]").click());
-//        step("Choose New collection", () ->
-//                $("[aria-label=\"KOLEKCJA, Rozwiń kategorie pomocnicze\"]")
-//                        .click());
         step("Choose dresses", () ->
                 $("[aria-label=\"SUKIENKI, Rozwiń kategorie pomocnicze\"]").click());
         step("Choose the first dress", () ->
@@ -101,12 +90,12 @@ public class Tests extends TestBase {
         step("Add to cart with chosen size", () ->
                 $(".product-cart-buttons").click());
         step("Check if there is an item in the cart", () ->
-                $(".mini-cart-item").shouldBe(exist));
+                $(".mini-cart-item").shouldBe(visible));
 
     }
 
     @Test
-    @Description("Check if there is a search input test")
+    @Description("Search input test")
     @DisplayName("Check if there is a search input")
     void checkSearchInput() {
         step("Open url 'https://www.zara.com/pl/'", () ->
@@ -114,16 +103,14 @@ public class Tests extends TestBase {
         step("Click the cookies button", () ->
                 $("#onetrust-accept-btn-handler").click());
         step("Click continue", () ->
-                $(".geolocation-modal__button")
-                        .click());
+                $(".geolocation-modal__button").click());
         step("Check the search input field", () ->
-                $(".layout-header-search-bar")
-                        .shouldBe(visible));
+                $(".layout-header-search-bar").shouldBe(visible));
 
     }
 
     @Test
-    @Description("Open the dress page and check if there is displayed description test")
+    @Description("Displayed description test")
     @DisplayName("Open the dress page and check if there is displayed description")
     void checkDressDescription() {
         step("Open url 'https://www.zara.com/pl/'", () ->
@@ -131,11 +118,9 @@ public class Tests extends TestBase {
         step("Click the cookies button", () ->
                 $("#onetrust-accept-btn-handler").click());
         step("Click continue", () ->
-                $(".geolocation-modal__button")
-                        .click());
+                $(".geolocation-modal__button").click());
         step("Click the sandwich button", () ->
-                $(".layout-header__mobile-action")
-                        .click());
+                $(".layout-header__mobile-action").click());
         step("Choose Kobieta", () ->
                 $("[aria-label=\"KOBIETA, Rozwiń kategorie pomocnicze\"]").click());
         step("Choose New collection", () ->
